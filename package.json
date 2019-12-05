@@ -1,0 +1,25 @@
+{
+  "name": "BugTrackerApp",
+  "version": "1.0.0",
+  "description": "App to help organize, track and complete tasks.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "cd server && node index.js",
+    "server_linux": "cd serevr && nodejs index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/michaelStillwell/BugTrackerApp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/michaelStillwell/BugTrackerApp/issues"
+  },
+  "homepage": "https://github.com/michaelStillwell/BugTrackerApp#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
