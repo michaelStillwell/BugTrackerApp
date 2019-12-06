@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "cd server && node index.js",
-    "server_linux": "cd serevr && nodejs index.js"
+    "server": "cls && cd server && node index.js",
+    "server_linux": "clear && cd server && nodejs index.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/michaelStillwell/BugTrackerApp#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "massive": "^6.1.3"
   }
 }
