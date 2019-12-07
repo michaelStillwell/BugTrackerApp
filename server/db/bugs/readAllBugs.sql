@@ -1,0 +1,1 @@
+SELECT * FROM bugs WHERE projectId = $1;
