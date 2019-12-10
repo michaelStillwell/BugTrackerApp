@@ -5,8 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "cls && cd server && node index.js",
-    "server_linux": "clear && cd server && nodejs index.js"
+    "w-server": "cls && cd server && node index.js",
+    "l-server": "clear && cd server && nodejs index.js",
+    "w-client": "cls && cd client && npm run start",
+    "l-client": "clear && cd client && npm run start",
+    "all": "concurrently \"npm:w-*\"",
+    "all_linux": "concurrently \"npm:l-*\""
   },
   "repository": {
     "type": "git",
@@ -24,5 +28,8 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "massive": "^6.1.3"
+  },
+  "devDependencies": {
+    "concurrently": "^5.0.1"
   }
 }

@@ -5,6 +5,12 @@ const { json } = require('body-parser');
 const app = express();
 const port = 3223;
 
+/**
+ * TODO:
+ *  - configure auth0 to log in users
+ *  - decide what is going to be sent in the cookie
+ */
+
 app.use(cors());
 app.use(json());
 
@@ -36,19 +42,19 @@ massive({
 app.get('/', (req, res, next) => res.send('<h1>Hello World!</h1>'));
 
 // CREATE
-app.get('/api/create/project/', createNewProject);
-app.get('/api/create/bug/:projectId', createNewBug);
+app.get('/api/create/projects/:userId', createNewProject);
+app.get('/api/create/bugs/:projectId', createNewBug);
 
 // READ
-app.get('/api/read/project/:userId', readAllProjects);
+app.get('/api/read/projects/:userId', readAllProjects);
 app.get('/api/read/bugs/:projectId', readAllBugs);
 
 // UPDATE
-app.get('/api/update/project/:userId', updateProjectInformation);
+app.get('/api/update/projects/:userId', updateProjectInformation);
 app.get('/api/update/bugs/:bugId', updateBugInformation);
 
 // DELETE
-app.get('/api/delete/project/:userId', deleteProject);
+app.get('/api/delete/projects/:userId', deleteProject);
 app.get('/api/delete/bugs/:bugId', deleteBug);
 
 app.listen(3223, () => console.log(`Listening on port ${port}`));

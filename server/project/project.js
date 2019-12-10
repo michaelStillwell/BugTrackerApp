@@ -1,3 +1,9 @@
+
+/**
+ * TODO:
+ *  - redo functions to send more robust information
+ */
+
 function createNewProject(req, res, next) {
     const db = req.app.get('db');
 
